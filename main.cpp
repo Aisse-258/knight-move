@@ -13,9 +13,10 @@ const string positions [chessBoardSize][chessBoardSize] = {
 	{"a8\0","b8\0","c8\0","d8\0","e8\0","f8\0","g8\0","h8\0"}
 };
 int knight (std::string pos1, std::string pos2) {
-	if (pos1 == pos2) return 0;
+	int step = 0;
+	if (pos1 == pos2) return step;
 	int i,j;
-	for (i=0;i<chessBoardSize;i++){
+	for (i=0;i<chessBoardSize;i++){//отметили начальную и конечную позиции на доске
 		for (j=0; j<chessBoardSize; j++){
 			if (pos1 == positions[i][j]) {
 				chessBoard[i][j] = 0;
@@ -28,6 +29,87 @@ int knight (std::string pos1, std::string pos2) {
 			}
 		}
 	}
+	do {
+		step++;
+		for (i=0;i<chessBoardSize;i++){
+			for (j=0; j<chessBoardSize; j++){
+				if (chessBoard[i][j] == step-1) {//находим точку из предыдущего шага
+					if(i+1<8 && j+2<8){//пробуем сделать ход
+						if (chessBoard[i+1][j+2] == 9999) {//если приходим в конечную точку, готово
+							return step;
+						}
+						else if (chessBoard[i+1][j+2] == -1){//если нет, и там ещё не были, ставим там новую точку
+							chessBoard[i+1][j+2] = step;
+						}
+					}
+					if(i-1>=0 && j+2<8){//и так во все стороны, пока точки не закончатся или мы не придём куда надо
+						if (chessBoard[i-1][j+2] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i-1][j+2] == -1){
+							chessBoard[i-1][j+2] = step;
+						}
+					}
+					if(i-2>=0 && j+1<8){
+						if (chessBoard[i-2][j+1] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i-2][j+1] == -1){
+							chessBoard[i-2][j+1] = step;
+						}
+					}
+					if(i-2>=0 && j-1>=0){
+						if (chessBoard[i-2][j-1] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i-2][j-1] == -1){
+							chessBoard[i-2][j-1] = step;
+						}
+					}
+					if(i-1>=0 && j-2>=0){
+						if (chessBoard[i-1][j-2] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i-1][j-2] == -1){
+							chessBoard[i-1][j-2] = step;
+						}
+					}
+					if(i+1<8 && j-2>=0){
+						if (chessBoard[i+1][j-2] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i+1][j-2] == -1){
+							chessBoard[i+1][j-2] = step;
+						}
+					}
+					if(i+2<8 && j-1>=0){
+						if (chessBoard[i+2][j-1] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i+2][j-1] == -1){
+							chessBoard[i+2][j-1] = step;
+						}
+					}
+					if(i+2<8 && j+1<8){
+						if (chessBoard[i+2][j+1] == 9999) {
+							return step;
+						}
+						else if (chessBoard[i+2][j+1] == -1){
+							chessBoard[i+2][j+1] = step;
+						}
+					}
+				}
+			}
+		}
+		/*for (i=0; i<chessBoardSize; i++){
+			for (j=0; j<chessBoardSize; j++){
+				cout<<chessBoard[i][j]<<"\t";
+			}
+			cout<<endl;
+		}*/
+	}
+	while(step < 9999);
+	return step;
 }
 int main(){
 	string Pos1, Pos2;
@@ -42,13 +124,13 @@ int main(){
 	}
 	while (Pos2.length() != 2 || Pos2[1]<'1' || Pos2[1]>'8' || Pos2[0]<'a' || Pos2[0]>'h');
 
-	knight(Pos1, Pos2);
-	int i, j;
+	cout<<"Minimum steps required:\n"<<knight(Pos1, Pos2)<<endl;
+	/*int i, j;
 	for (i=0; i<chessBoardSize; i++){
 		for (j=0; j<chessBoardSize; j++){
 			cout<<chessBoard[i][j]<<"\t";
 		}
 		cout<<endl;
-	}
+	}*/
 	return 0;
 }
