@@ -32,15 +32,15 @@ int knight (std::string pos1, std::string pos2) {
 int main(){
 	string Pos1, Pos2;
 	cout<<"Start position:\n";
-	//do {
+	do {
 		cin>>Pos1;
-	//}
-	//while (Pos1.length() != 2 || Pos1[1]<"1\0" || Pos1[1]>"8\0" || Pos1[0]<"a\0" || Pos1[0]>"h\0");
+	}
+	while (Pos1.length() != 2 || Pos1[1]<'1' || Pos1[1]>'8' || Pos1[0]<'a' || Pos1[0]>'h');
 	cout<<"End position:\n";
-	//do {
+	do {
 		cin>>Pos2;
-	//}
-	//while (Pos2.length() != 2 || Pos2[1]<"1\0" || Pos2[1]>"8\0" || Pos2[0]<"a\0" || Pos2[0]>"h\0");
+	}
+	while (Pos2.length() != 2 || Pos2[1]<'1' || Pos2[1]>'8' || Pos2[0]<'a' || Pos2[0]>'h');
 
 	knight(Pos1, Pos2);
 	int i, j;
@@ -50,6 +50,5 @@ int main(){
 		}
 		cout<<endl;
 	}
-	//cout<<(Pos1[0] > "b")<<endl;//сравнение строк из переменных почему-то не работает, хотя просто две строки сравнить можно
 	return 0;
 }
