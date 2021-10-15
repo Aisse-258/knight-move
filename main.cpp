@@ -112,25 +112,31 @@ int knight (std::string pos1, std::string pos2) {
 	return step;
 }
 int main(){
-	string Pos1, Pos2;
-	cout<<"Start position:\n";
+	string resume;
 	do {
-		cin>>Pos1;
-	}
-	while (Pos1.length() != 2 || Pos1[1]<'1' || Pos1[1]>'8' || Pos1[0]<'a' || Pos1[0]>'h');
-	cout<<"End position:\n";
-	do {
-		cin>>Pos2;
-	}
-	while (Pos2.length() != 2 || Pos2[1]<'1' || Pos2[1]>'8' || Pos2[0]<'a' || Pos2[0]>'h');
-
-	cout<<"Minimum steps required:\n"<<knight(Pos1, Pos2)<<endl;
-	/*int i, j;
-	for (i=0; i<chessBoardSize; i++){
-		for (j=0; j<chessBoardSize; j++){
-			cout<<chessBoard[i][j]<<"\t";
+		string Pos1, Pos2;
+		cout<<"Start position:\n";
+		do {
+			cin>>Pos1;
 		}
-		cout<<endl;
-	}*/
+		while (Pos1.length() != 2 || Pos1[1]<'1' || Pos1[1]>'8' || Pos1[0]<'a' || Pos1[0]>'h');
+		cout<<"End position:\n";
+		do {
+			cin>>Pos2;
+		}
+		while (Pos2.length() != 2 || Pos2[1]<'1' || Pos2[1]>'8' || Pos2[0]<'a' || Pos2[0]>'h');
+
+		cout<<"Minimum steps required:\n"<<knight(Pos1, Pos2)<<endl;
+		/*int i, j;
+		for (i=0; i<chessBoardSize; i++){
+			for (j=0; j<chessBoardSize; j++){
+				cout<<chessBoard[i][j]<<"\t";
+			}
+			cout<<endl;
+		}*/
+		cout<<"Enter any symbol to restart. Enter \"exit\" to exit.\n";
+		cin>>resume;
+	}
+	while (resume != "exit\0");
 	return 0;
 }
