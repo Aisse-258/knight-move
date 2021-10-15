@@ -5,6 +5,7 @@ using namespace std;
 int main(){
 	string resume;
 	do {
+		cout<<"Enter knight's positions in algebraic notation (for example, \"b2\"). Use letters a-h and numbers 1-8.\n";
 		string Pos1, Pos2;
 		cout<<"Start position:\n";
 		do {
