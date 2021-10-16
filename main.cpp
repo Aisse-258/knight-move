@@ -1,8 +1,12 @@
 #include <iostream>
 using namespace std;
 #include "knight.h"
+//#include "mainwindow.h"
+//#include <QApplication>
+//#include <QLabel>
 
-int main(){
+int main(int argc, char *argv[])
+{
 	string resume;
 	do {
 		cout<<"Enter knight's positions in algebraic notation (for example, \"b2\"). Use letters a-h and numbers 1-8.\n";
@@ -24,4 +28,9 @@ int main(){
 	}
 	while (resume != "exit\0");
 	return 0;
+	/*QApplication a(argc, argv);
+	MainWindow w;
+	w.show();
+
+	return a.exec();*/
 }
