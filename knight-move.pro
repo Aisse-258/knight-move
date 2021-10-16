@@ -12,9 +12,12 @@ TARGET = knight-move
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES +=\
+        mainwindow.cpp \
+    knight.cpp \
+    main.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    knight.h
 
 FORMS    += mainwindow.ui
