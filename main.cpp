@@ -1,13 +1,14 @@
 #include <iostream>
 using namespace std;
 #include "knight.h"
-//#include "mainwindow.h"
-//#include <QApplication>
-//#include <QLabel>
+#include "mainwindow.h"
+#include <QApplication>
+#include <QIcon>
+#include <QLabel>
 
 int main(int argc, char *argv[])
 {
-	string resume;
+	/*string resume;
 	do {
 		cout<<"Enter knight's positions in algebraic notation (for example, \"b2\"). Use letters a-h and numbers 1-8.\n";
 		string Pos1, Pos2;
@@ -27,10 +28,13 @@ int main(int argc, char *argv[])
 		cin>>resume;
 	}
 	while (resume != "exit\0");
-	return 0;
-	/*QApplication a(argc, argv);
+	return 0;*/
+	QApplication a(argc, argv);
 	MainWindow w;
+	//w.resize(300, 320);
+	w.setWindowTitle("Knight's move");
+	w.setWindowIcon(QIcon("knight-icon.png"));
 	w.show();
 
-	return a.exec();*/
+	return a.exec();
 }
