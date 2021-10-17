@@ -21,3 +21,6 @@ HEADERS  += mainwindow.h \
     knight.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    knight-resources.qrc
