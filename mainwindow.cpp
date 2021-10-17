@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::OnStart() {
 
   int val = knight(ui->position1_input->text(),ui->position2_input->text());
-  ui->lbl->setText(QString::number(val));
+  ui->statusBar->showMessage("Необходимо шагов: "+QString::number(val));
 }
 
 MainWindow::~MainWindow()
