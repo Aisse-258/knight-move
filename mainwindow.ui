@@ -67,23 +67,23 @@
      <bool>false</bool>
     </attribute>
    </widget>
-   <widget class="QGraphicsView" name="graphicsView">
+   <widget class="QLabel" name="knight_picture">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>240</width>
-      <height>240</height>
+      <x>69</x>
+      <y>223</y>
+      <width>26</width>
+      <height>26</height>
      </rect>
     </property>
-    <property name="backgroundBrush">
-     <brush brushstyle="CrossPattern">
-      <color alpha="255">
-       <red>0</red>
-       <green>0</green>
-       <blue>0</blue>
-      </color>
-     </brush>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>knight-icon.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="lbl">
@@ -99,6 +99,10 @@
      <string/>
     </property>
    </widget>
+   <zorder>board</zorder>
+   <zorder>horizontalLayoutWidget</zorder>
+   <zorder>lbl</zorder>
+   <zorder>knight_picture</zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
