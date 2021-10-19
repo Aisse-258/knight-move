@@ -8,6 +8,12 @@ QTextStream out(stdout);
 const int chessBoardSize = 8;
 int chessBoard [chessBoardSize][chessBoardSize] = {0};
 Position **positions;
+void deletePositions () {
+	for (int i=0;i<chessBoardSize;i++){
+		delete [] positions[i];
+	}
+	delete positions;
+}
 Position *stepPositions;//здесь будет путь
 int knight (QString pos1, QString pos2) {
 	positions = new Position *[chessBoardSize];
@@ -165,6 +171,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2+1][pos_j2+2] == stepBack){
@@ -180,6 +187,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2-1][pos_j2+2] == stepBack){
@@ -195,6 +203,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2-2][pos_j2+1] == stepBack){
@@ -210,6 +219,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2-2][pos_j2-1] == stepBack){
@@ -225,6 +235,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2-1][pos_j2-2] == stepBack){
@@ -240,6 +251,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2+1][pos_j2-2] == stepBack){
@@ -255,6 +267,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2+2][pos_j2-1] == stepBack){
@@ -270,6 +283,7 @@ int knight (QString pos1, QString pos2) {
 					out<<stepPositions[i].pos_name<<"\t";
 				}
 				out<<endl;
+				deletePositions();
 				return step;
 			}
 			else if (chessBoard[pos_i2+2][pos_j2+1] == stepBack){
