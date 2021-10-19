@@ -1,36 +1,22 @@
 #include <iostream>
 #include <QString>
 #include <QTextStream>
+#include "pos_init.h"
 using namespace std;
 QTextStream out(stdout);
 const int chessBoardSize = 8;
 int chessBoard [chessBoardSize][chessBoardSize] = {0};
-QString positions [chessBoardSize][chessBoardSize][3]/* = {
-	{"a1","b1","c1","d1","e1","f1","g1","h1"},
-	{"a2","b2","c2","d2","e2","f2","g2","h2"},
-	{"a3","b3","c3","d3","e3","f3","g3","h3"},
-	{"a4","b4","c4","d4","e4","f4","g4","h4"},
-	{"a5","b5","c5","d5","e5","f5","g5","h5"},
-	{"a6","b6","c6","d6","e6","f6","g6","h6"},
-	{"a7","b7","c7","d7","e7","f7","g7","h7"},
-	{"a8","b8","c8","d8","e8","f8","g8","h8"}
-}*/;
-void pos_init() {//генерация таблицы позиций
-	for (int i=0;i<chessBoardSize;i++){
-		int c='a';
-		for (int j=0;j<chessBoardSize;j++){
-			positions[i][j][0] = c+QString::number(i+1);
-			positions[i][j][1] = QString::number(14 + j*30);
-			positions[i][j][2] = QString::number(223 - i*30);
-			//out<<positions[i][j][0]<<"\t"<<positions[i][j][1]<<"\t"<<positions[i][j][2]<<"\t";
-			c++;
-		}
-		//out<<endl;
-	}
-}
+QString ***positions;
 QString **stepPositions;//здесь будет путь
 int knight (QString pos1, QString pos2) {
-	pos_init();
+	positions = new QString **[chessBoardSize];
+	for(int i=0; i<chessBoardSize;i++) {
+		positions[i] = new QString *[chessBoardSize];
+		for (int j=0;j<chessBoardSize;j++) {
+			positions[i][j] = new QString [3];
+		}
+	}
+	pos_init(positions, chessBoardSize);
 	if (pos1.length() != 2 || pos2.length() != 2 ||
 		QString::compare(pos1, positions[0][0][0]) < 0 || QString::compare(pos1, positions[7][7][0]) > 0 ||
 		QString::compare(pos2, positions[0][0][0]) < 0 || QString::compare(pos2, positions[7][7][0]) > 0 ) {

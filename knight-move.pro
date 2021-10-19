@@ -15,10 +15,12 @@ TEMPLATE = app
 SOURCES +=\
         mainwindow.cpp \
     knight.cpp \
-    main.cpp
+    main.cpp \
+    pos_init.cpp
 
 HEADERS  += mainwindow.h \
-    knight.h
+    knight.h \
+    pos_init.h
 
 FORMS    += mainwindow.ui
 
