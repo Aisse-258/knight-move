@@ -2,8 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QLabel>
-#include <QLineEdit>
 #include <QWidget>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsView>

@@ -5,7 +5,6 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QString>
-#include <QGridLayout>
 #include <QPixmap>
 #include <QVBoxLayout>
 #include <QGraphicsPixmapItem>

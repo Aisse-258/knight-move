@@ -59,19 +59,6 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="lbl">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>260</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="knight_picture">
     <property name="geometry">
      <rect>
@@ -91,7 +78,6 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="board">
    <widget class="QGraphicsView" name="chess_board">
     <property name="geometry">
      <rect>
@@ -101,132 +87,6 @@
       <height>270</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 254, 219);</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
-&lt;tr&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;a&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;b&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;c&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;e&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;f&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;g&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;h&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td  style=&quot;background-color:white;&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;8&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;8&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;7&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;7&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;6&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;6&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;5&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;5&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;4&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;4&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;3&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;3&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:brown;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;a&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;b&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;c&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;e&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;f&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;g&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;h&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td style=&quot;background-color:white;&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
     <property name="sceneRect">
      <rectf>
       <x>0.000000000000000</x>
@@ -252,22 +112,5 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>StartButton</sender>
-   <signal>clicked()</signal>
-   <receiver>lbl</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>304</x>
-     <y>321</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>170</x>
-     <y>161</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
