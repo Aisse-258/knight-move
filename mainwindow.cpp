@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "knight.h"
+#include "position_class.h"
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
@@ -50,14 +51,11 @@ void MainWindow::OnStart() {
 void MainWindow::timeToStep() {
     ui->statusBar->showMessage("Необходимо шагов: "+QString::number(stepsRequired)+"; Шаг: "+QString::number(currentStep));
     knight_figure->show();
-    knight_figure->setPos(stepPositions[currentStep][1].toInt(), stepPositions[currentStep][2].toInt());
+    knight_figure->setPos(stepPositions[currentStep].x, stepPositions[currentStep].y);
     currentStep++;
     if (currentStep == stepsRequired+1) {
         timer->stop();
-        for (int i=0;i<stepsRequired+1;i++){
-            delete [] stepPositions[i];
-        }
-        delete stepPositions;
+        delete [] stepPositions;
     }
 }
 
