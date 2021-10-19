@@ -8,6 +8,7 @@
 #include <QGraphicsScene>
 #include <QTime>
 #include <QTimer>
+#include <QKeyEvent>
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ public:
 private slots:
     void OnStart();
     void timeToStep();
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::MainWindow *ui;

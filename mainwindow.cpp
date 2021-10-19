@@ -9,6 +9,7 @@
 #include <QVBoxLayout>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsView>
+#include <QKeyEvent>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -51,6 +52,10 @@ void MainWindow::timeToStep() {
     }
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape) {
+           qApp->quit();
+    }
 }
 
 MainWindow::~MainWindow()
