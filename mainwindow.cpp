@@ -38,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 void MainWindow::OnStart() {
+	ui->StartButton->setEnabled(false);
 	stepsRequired = knight(ui->position1_input->text(),ui->position2_input->text());
 	if (stepsRequired >=0){
 		currentStep = 0;
@@ -55,6 +56,7 @@ void MainWindow::timeToStep() {
 	currentStep++;
 	if (currentStep == stepsRequired+1) {
 		timer->stop();
+		ui->StartButton->setEnabled(true);
 		delete [] stepPositions;
 	}
 }
