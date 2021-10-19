@@ -5,6 +5,9 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QWidget>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsView>
+#include <QGraphicsScene>
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +26,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QGraphicsView *chess_board;
+    QGraphicsScene *scene;
+    QGraphicsPixmapItem *knight_figure;
+    QGraphicsPixmapItem *background;
 };
 
 #endif // MAINWINDOW_H
