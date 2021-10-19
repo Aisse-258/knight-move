@@ -6,5 +6,6 @@
 using namespace std;
 
 int knight (QString pos1, QString pos2);
+extern QString **stepPositions;
 
 #endif
