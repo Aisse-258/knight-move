@@ -28,13 +28,29 @@ MainWindow::MainWindow(QWidget *parent) :
     scene->addItem(knight_figure);
     knight_figure->setScale(0.15);
     knight_figure->hide();
+    timer = new QTimer();
+    timer->setInterval(500);
+
+    connect(timer, SIGNAL(timeout()), this, SLOT(timeToStep()));
     connect(ui->StartButton, &QPushButton::clicked, this, &MainWindow::OnStart);
 }
 
 void MainWindow::OnStart() {
+    stepsRequired = knight(ui->position1_input->text(),ui->position2_input->text());
+    currentStep = 0;
+    timer->start();
+}
 
-  int val = knight(ui->position1_input->text(),ui->position2_input->text());
-  ui->statusBar->showMessage("Необходимо шагов: "+QString::number(val));
+void MainWindow::timeToStep() {
+    ui->statusBar->showMessage("Необходимо шагов: "+QString::number(stepsRequired)+"; Шаг: "+QString::number(currentStep));
+    knight_figure->show();
+    knight_figure->setPos(stepPositions[currentStep][1].toInt(), stepPositions[currentStep][2].toInt());
+    currentStep++;
+    if (currentStep == stepsRequired+1) {
+        timer->stop();
+    }
+}
+
 }
 
 MainWindow::~MainWindow()
@@ -44,4 +60,5 @@ MainWindow::~MainWindow()
     delete chess_board;
     delete background;
     delete knight_figure;
+    delete timer;
 }

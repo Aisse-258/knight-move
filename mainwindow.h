@@ -6,6 +6,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QTime>
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -21,6 +23,7 @@ public:
 
 private slots:
     void OnStart();
+    void timeToStep();
 
 private:
     Ui::MainWindow *ui;
@@ -28,6 +31,9 @@ private:
     QGraphicsScene *scene;
     QGraphicsPixmapItem *knight_figure;
     QGraphicsPixmapItem *background;
+    QTimer *timer;
+    int currentStep;
+    int stepsRequired;
 };
 
 #endif // MAINWINDOW_H
