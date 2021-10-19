@@ -253,7 +253,7 @@ int knight (QString pos1, QString pos2) {
 				continue;
 			}
 		}
-		if(i-1>=0 && pos_j2-2>=0){
+		if(pos_i2-1>=0 && pos_j2-2>=0){
 			if (chessBoard[pos_i2-1][pos_j2-2] == 0) {
 				for(i=0;i<=step;i++){
 					out<<stepPositions[i][0]<<"\t";
