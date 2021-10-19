@@ -16,26 +16,26 @@ class MainWindow;
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+	explicit MainWindow(QWidget *parent = 0);
+	~MainWindow();
 
 private slots:
-    void OnStart();
-    void timeToStep();
-    void keyPressEvent(QKeyEvent *event);
+	void OnStart();
+	void timeToStep();
+	void keyPressEvent(QKeyEvent *event);
 
 private:
-    Ui::MainWindow *ui;
-    QGraphicsView *chess_board;
-    QGraphicsScene *scene;
-    QGraphicsPixmapItem *knight_figure;
-    QGraphicsPixmapItem *background;
-    QTimer *timer;
-    int currentStep;
-    int stepsRequired;
+	Ui::MainWindow *ui;
+	QGraphicsView *chess_board;
+	QGraphicsScene *scene;
+	QGraphicsPixmapItem *knight_figure;
+	QGraphicsPixmapItem *background;
+	QTimer *timer;
+	int currentStep;
+	int stepsRequired;
 };
 
 #endif // MAINWINDOW_H
