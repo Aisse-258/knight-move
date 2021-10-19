@@ -54,6 +54,10 @@ void MainWindow::timeToStep() {
     currentStep++;
     if (currentStep == stepsRequired+1) {
         timer->stop();
+        for (int i=0;i<stepsRequired+1;i++){
+            delete [] stepPositions[i];
+        }
+        delete stepPositions;
     }
 }
 
