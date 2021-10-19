@@ -38,8 +38,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::OnStart() {
     stepsRequired = knight(ui->position1_input->text(),ui->position2_input->text());
-    currentStep = 0;
-    timer->start();
+    if (stepsRequired >=0){
+        currentStep = 0;
+        timer->start();
+    }
+    else {
+        ui->statusBar->showMessage("Ошибка: Недопустимый ввод!");
+    }
 }
 
 void MainWindow::timeToStep() {

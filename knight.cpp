@@ -31,6 +31,11 @@ void pos_init() {//генерация таблицы позиций
 QString **stepPositions;//здесь будет путь
 int knight (QString pos1, QString pos2) {
 	pos_init();
+	if (pos1.length() != 2 || pos2.length() != 2 ||
+		QString::compare(pos1, positions[0][0][0]) < 0 || QString::compare(pos1, positions[7][7][0]) > 0 ||
+		QString::compare(pos2, positions[0][0][0]) < 0 || QString::compare(pos2, positions[7][7][0]) > 0 ) {
+		return -1;//если введенные строки не являются позициями, -1
+	}
 	int step = 0;
 	int i,j;
 	if (QString::compare(pos1, pos2) == 0) {//если позиции равны
