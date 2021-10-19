@@ -16,11 +16,13 @@ SOURCES +=\
         mainwindow.cpp \
     knight.cpp \
     main.cpp \
-    pos_init.cpp
+    pos_init.cpp \
+    position_class.cpp
 
 HEADERS  += mainwindow.h \
     knight.h \
-    pos_init.h
+    pos_init.h \
+    position_class.h
 
 FORMS    += mainwindow.ui
 
